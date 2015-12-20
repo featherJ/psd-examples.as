@@ -12,7 +12,6 @@ package
 	
 	import displays.GridContainer;
 	
-	import tests.CurvesTest;
 	import tests.LayerTreeTest;
 	import tests.LockedTest;
 	import tests.MaskTest;
@@ -42,11 +41,11 @@ package
 			this.stage.addEventListener(Event.RESIZE,resize_handler);
 			
 			//注册测试用例 | register test case
-//			this.registerTest(MaskTest,"files/mask-user&vector.psd");
-//			this.registerTest(PreviewTest,"files/preview.psd");
-//			this.registerTest(TextTest,"files/text.psd");
-//			this.registerTest(TextEngineDataTest,"files/text.engineData");
-//			this.registerTest(LockedTest,"files/locked.psd");
+			this.registerTest(MaskTest,"files/mask-user&vector.psd");
+			this.registerTest(PreviewTest,"files/preview.psd");
+			this.registerTest(TextTest,"files/text.psd");
+			this.registerTest(TextEngineDataTest,"files/text.engineData");
+			this.registerTest(LockedTest,"files/locked.psd");
 			this.registerTest(LayerTreeTest,"files/preview.psd");
 			//运行测试 | run tests
 			runTests();
