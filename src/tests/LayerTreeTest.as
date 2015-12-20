@@ -2,8 +2,6 @@ package tests
 {
 	import com.fancynode.psd.PSD;
 	import com.fancynode.psd.nodes.RootNode;
-	import com.fancynode.psd.secitons.imageData.ImageData;
-	import com.fancynode.psd.secitons.layerAndMask.LayerRecord;
 	
 	import flash.utils.ByteArray;
 

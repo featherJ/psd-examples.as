@@ -33,9 +33,9 @@ package tests
 				log("isFolder:"+layer.isFolder+"\tisFolderEnd:"+layer.isFolderEnd+"\tallLocked:"+layer.allLocked+"\tposLocked:"+layer.positionLocked)
 			}
 			//预览图数据 | Preview image data
-			var previewRendererData:ChannelRenderData = psd.imageData.channelRendererData;
+			var previewRenderData:ChannelRenderData = psd.imageData.channelRenderData;
 			//预览图的位图数据 | Preview image bitmap data
-			var previewBitmapData:BitmapData = ChannelDataRenderer.render(previewRendererData);
+			var previewBitmapData:BitmapData = ChannelDataRenderer.render(previewRenderData);
 			//预览图位图 | Preview bitmap
 			var previewBmp:Bitmap = new Bitmap(previewBitmapData);
 			addDisplay(previewBmp,"Preview");

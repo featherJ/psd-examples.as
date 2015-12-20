@@ -43,18 +43,18 @@ package tests
 			log("MaskArgs:","{UserDensity:"+mask.userMaskDensity/255*100+"%"+" UserFeather:"+mask.userMaskFeather+" MaskDensity:"+mask.vectorMaskDensity/255*100+"%"+" MaskDensity:"+mask.vectorMaskFeather+"}")
 			
 			//图层部分渲染数据 | Layer renderer data
-			var layerRendererData:ChannelRenderData = channel.channelRendererData;
+			var layerRenderData:ChannelRenderData = channel.channelRenderData;
 			//综合的遮罩渲染数据 | Mult mask renderer data
-			var maskRendererData:ChannelRenderData = channel.maskChannelRenderData;
+			var maskRenderData:ChannelRenderData = channel.maskChannelRenderData;
 			//真实的遮罩渲染数据 | Real mask renderer data
-			var realMaskRendererData:ChannelRenderData = channel.realMaskChannelRenderData;
+			var realMaskRenderData:ChannelRenderData = channel.realMaskChannelRenderData;
 			
 			//图层位图数据 | Layer bitmap data
-			var layerBimtapData:BitmapData = ChannelDataRenderer.render(layerRendererData);
+			var layerBimtapData:BitmapData = ChannelDataRenderer.render(layerRenderData);
 			//综合的遮罩位图数据 | Mult mask bitmap data
-			var maskBimtapData:BitmapData = ChannelDataRenderer.render(maskRendererData);
+			var maskBimtapData:BitmapData = ChannelDataRenderer.render(maskRenderData);
 			//真实的遮罩位图数据 | Real mask bitmap data
-			var realMaskBitmapData:BitmapData = ChannelDataRenderer.render(realMaskRendererData);
+			var realMaskBitmapData:BitmapData = ChannelDataRenderer.render(realMaskRenderData);
 			
 			//图层位图 | Layer bitmap
 			var layerBmp:Bitmap = new Bitmap(layerBimtapData);
@@ -69,9 +69,9 @@ package tests
 			addDisplay(realMaskBmp,"Real Mask");
 			
 			//预览图数据 | Preview image data
-			var previewRendererData:ChannelRenderData = psd.imageData.channelRendererData;
+			var previewRenderData:ChannelRenderData = psd.imageData.channelRenderData;
 			//预览图的位图数据 | Preview image bitmap data
-			var previewBitmapData:BitmapData = ChannelDataRenderer.render(previewRendererData);
+			var previewBitmapData:BitmapData = ChannelDataRenderer.render(previewRenderData);
 			//预览图位图 | Preview bitmap
 			var previewBmp:Bitmap = new Bitmap(previewBitmapData);
 			addDisplay(previewBmp,"Preview");
