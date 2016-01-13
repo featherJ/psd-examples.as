@@ -1,6 +1,6 @@
 package tests
 {
-	import com.fancynode.psd.EngineData;
+	import com.fancynode.psd.enginedata.EngineData;
 	
 	import flash.utils.ByteArray;
 
